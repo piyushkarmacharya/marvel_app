@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:marvel_app/homepage.dart";
+import "package:marvel_app/pages/splash_screen/splash_screen.dart";
 
 void main() {
   runApp(const MyApp());
@@ -23,9 +24,10 @@ class MyApp extends StatelessWidget {
           colorScheme: const ColorScheme.dark(
             surface: Color(0xFFED1B24),
           )),
-      initialRoute: Homepage.routeName,
+      initialRoute: SplashScreen.routeName,
       routes: {
         Homepage.routeName: (context) => const Homepage(),
+        SplashScreen.routeName: (context) => const SplashScreen(),
       },
     );
   }
