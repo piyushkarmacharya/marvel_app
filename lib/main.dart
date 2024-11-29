@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 import "package:marvel_app/homepage.dart";
 import "package:marvel_app/pages/splash_screen/splash_screen.dart";
+import "package:marvel_app/pages/welcome_screen/welcome_screen.dart";
+import "package:marvel_app/screen_size.dart";
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenSize().initSize(context);
     return MaterialApp(
       title: "Marvel App",
       debugShowCheckedModeBanner: false,
@@ -20,6 +23,8 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(0)),
                   backgroundColor: const Color(0xFFED1B24))),
           colorScheme: const ColorScheme.dark(
             surface: Color(0xFFED1B24),
@@ -28,6 +33,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Homepage.routeName: (context) => const Homepage(),
         SplashScreen.routeName: (context) => const SplashScreen(),
+        WelcomeScreen.routeName: (context) => const WelcomeScreen(),
       },
     );
   }

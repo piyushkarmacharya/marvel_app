@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:marvel_app/pages/welcome_screen/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   static String routeName = "/splash-screen";
@@ -20,6 +21,9 @@ class _SplashScreenState extends State<SplashScreen> {
       setState(() {
         bgColor = const Color(0xFF1E1E1E);
       });
+    });
+    Timer(const Duration(seconds: 6), () {
+      Navigator.of(context).pushReplacementNamed(WelcomeScreen.routeName);
     });
   }
 
