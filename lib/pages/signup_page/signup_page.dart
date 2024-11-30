@@ -16,6 +16,7 @@ class SignupPage extends StatefulWidget {
 class _SignupPageState extends State<SignupPage> {
   bool _showPassword = false;
   GlobalKey<FormState> formState = GlobalKey<FormState>();
+  Color buttonBgColor = Colors.black;
 
   @override
   Widget build(BuildContext context) {
@@ -132,10 +133,19 @@ class _SignupPageState extends State<SignupPage> {
                           width: double.infinity,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.black,
+                              backgroundColor: buttonBgColor,
                             ),
                             onPressed: () {
-                              if (formState.currentState!.validate()) {}
+                              if (formState.currentState!.validate()) {
+                                setState(() {
+                                  buttonBgColor =
+                                      Theme.of(context).primaryColor;
+                                });
+                              } else {
+                                setState(() {
+                                  buttonBgColor = Colors.black;
+                                });
+                              }
                             },
                             child: const Text(
                               "Signup",

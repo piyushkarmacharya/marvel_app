@@ -1,6 +1,9 @@
+import "dart:async";
+
 import "package:flutter/material.dart";
 import "package:flutter_svg/flutter_svg.dart";
 import "package:marvel_app/constants/image_path.dart";
+import "package:marvel_app/pages/login_page/login_page.dart";
 import "package:marvel_app/pages/signup_page/signup_page.dart";
 import "package:marvel_app/screen_size.dart";
 
@@ -130,8 +133,11 @@ class WelcomeScreenState extends State<WelcomeScreen> {
                                   onPressed: () {
                                     setState(() {
                                       signup = true;
-                                      Navigator.pushNamed(
-                                          context, SignupPage.routeName);
+                                      Timer(const Duration(milliseconds: 70),
+                                          () {
+                                        Navigator.of(context)
+                                            .pushNamed(SignupPage.routeName);
+                                      });
                                     });
                                   },
                                   child: const Text(
@@ -160,6 +166,11 @@ class WelcomeScreenState extends State<WelcomeScreen> {
                                     onPressed: () {
                                       setState(() {
                                         signup = false;
+                                        Timer(const Duration(milliseconds: 70),
+                                            () {
+                                          Navigator.of(context)
+                                              .pushNamed(LoginPage.routeName);
+                                        });
                                       });
                                     },
                                     child: const Text(
