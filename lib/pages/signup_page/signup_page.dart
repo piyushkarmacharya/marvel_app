@@ -54,6 +54,10 @@ class _SignupPageState extends State<SignupPage> {
                             fontWeight: FontWeight.w600,
                             color: Colors.black),
                         decoration: InputDecoration(
+                            errorStyle: TextStyle(
+                                color: Theme.of(context)
+                                    .primaryColor
+                                    .withOpacity(0.9)),
                             contentPadding: EdgeInsets.symmetric(
                                 horizontal: 15,
                                 vertical: 0.02 * ScreenSize.height),
@@ -86,6 +90,10 @@ class _SignupPageState extends State<SignupPage> {
                             fontWeight: FontWeight.w600,
                             color: Colors.black),
                         decoration: InputDecoration(
+                            errorStyle: TextStyle(
+                                color: Theme.of(context)
+                                    .primaryColor
+                                    .withOpacity(0.9)),
                             suffix: GestureDetector(
                                 onTap: () {
                                   setState(() {
