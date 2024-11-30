@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(const Duration(seconds: 3), () {
       setState(() {
-        bgColor = const Color(0xFF1E1E1E);
+        bgColor = Colors.black;
       });
     });
     Timer(const Duration(seconds: 6), () {

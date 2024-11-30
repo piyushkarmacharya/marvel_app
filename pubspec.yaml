@@ -62,6 +62,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/logo/Marvel-Logo.svg
+    - assets/logo/Facebook.svg
+    - assets/logo/Google.svg
     - assets/images/Rectangle1.png
     - assets/images/Rectangle2.png
     - assets/images/Rectangle3.png

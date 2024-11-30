@@ -7,4 +7,6 @@ class ImagePath {
   static String rect6 = "assets/images/Rectangle6.png";
 
   static String logo = "assets/logo/Marvel-Logo.svg";
+  static String facebook = "assets/logo/Facebook.svg";
+  static String google = "assets/logo/Google.svg";
 }

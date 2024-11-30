@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 import "package:marvel_app/homepage.dart";
+import "package:marvel_app/pages/login_page/login_page.dart";
+import "package:marvel_app/pages/signup_page/signup_page.dart";
 import "package:marvel_app/pages/splash_screen/splash_screen.dart";
 import "package:marvel_app/pages/welcome_screen/welcome_screen.dart";
 import "package:marvel_app/screen_size.dart";
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           fontFamily: "Inter",
-          scaffoldBackgroundColor: const Color(0xFF1E1E1E),
+          scaffoldBackgroundColor: Colors.black,
           useMaterial3: true,
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
@@ -34,6 +36,8 @@ class MyApp extends StatelessWidget {
         Homepage.routeName: (context) => const Homepage(),
         SplashScreen.routeName: (context) => const SplashScreen(),
         WelcomeScreen.routeName: (context) => const WelcomeScreen(),
+        SignupPage.routeName: (context) => const SignupPage(),
+        LoginPage.routeName: (context) => const LoginPage(),
       },
     );
   }

@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_svg/flutter_svg.dart";
 import "package:marvel_app/constants/image_path.dart";
+import "package:marvel_app/pages/signup_page/signup_page.dart";
 import "package:marvel_app/screen_size.dart";
 
 class WelcomeScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class WelcomeScreenState extends State<WelcomeScreen> {
   int selected = 0;
   List<Widget> widgets = [
     const Text(
-      "All your favourite MARVEL Movies & Series at one place",
+      "All your favourite\nMARVEL Movies & Series\nat one place",
       style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
       textAlign: TextAlign.center,
     ),
@@ -129,6 +130,8 @@ class WelcomeScreenState extends State<WelcomeScreen> {
                                   onPressed: () {
                                     setState(() {
                                       signup = true;
+                                      Navigator.pushNamed(
+                                          context, SignupPage.routeName);
                                     });
                                   },
                                   child: const Text(
