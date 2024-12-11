@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.black,
       body: Center(
         child: AnimatedContainer(
-            duration: const Duration(milliseconds: 1000),
+            duration: const Duration(milliseconds: 1100),
             curve: Curves.bounceOut,
             color: Theme.of(context).primaryColor,
             height: animate ? 86 : ScreenSize.height,
